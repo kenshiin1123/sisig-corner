@@ -24,6 +24,7 @@ const contents = [
       "This is the space to introduce the restaurant’s menu. Briefly describe the types of dishes and beverages offered and highlight any special features. Encourage site visitors to view the whole menu by exploring the menu page.",
     buttonText: "View Menu",
     variant: 2,
+    color: "bg-primary",
   },
   {
     header: "Location",
@@ -36,6 +37,7 @@ const contents = [
         "https://www.google.com/maps/dir/?api=1&destination=8.1945863,123.8591501";
       window.open(googleMapsUrl, "_blank");
     },
+    color: "bg-secondary",
   },
 ];
 
@@ -56,7 +58,7 @@ function App() {
           width="sm:w-[50%]"
           src="/images/sisig_01.jpg"
         />
-        <ContentCard {...contents[1]} className={"sm:w-[50%]"} />
+        <ContentCard {...contents[1]} />
       </SplitSection>
       <Ticker
         variant={2}
@@ -71,11 +73,7 @@ function App() {
       />
       <SplitSection reverse>
         <Map />
-        <ContentCard
-          {...contents[2]}
-          className={"text-white"}
-          color="bg-secondary"
-        />
+        <ContentCard {...contents[2]} />
       </SplitSection>
     </div>
   );

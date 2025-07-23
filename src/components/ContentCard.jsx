@@ -8,7 +8,7 @@ export default function ContentCard({
   buttonText,
   variant = 1,
   onClick,
-  className,
+  className = "",
 }) {
   let variantClass = "";
 
@@ -17,11 +17,13 @@ export default function ContentCard({
   }
 
   return (
-    <div className={`px-3 py-7 flex flex-col ${variantClass} ${className}`}>
+    <div
+      className={`px-3 py-10 flex flex-col justify-center ${variantClass} ${className}`}
+    >
       <span className="text-3xl">
-        <Star color={"white"} />
+        <Star color={variant === 1 ? "black" : "white"} className="mb-5" />
       </span>
-      <Header>{header}</Header>
+      <Header className={"mb-5"}>{header}</Header>
       <p className="text-sm font-pt-serif sm:max-w-[80%] md:max-w-[60%]">
         {paragraph}
       </p>
