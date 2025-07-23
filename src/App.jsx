@@ -16,6 +16,7 @@ const contents = [
     paragraph:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil nesciunt quam at illo consectetur asperiores harum, voluptatem natus quo quaerat. Ratione in quas expedita nostrum ullam molestias id ipsa vero.",
     buttonText: "Read More",
+    variant: 1,
   },
   {
     header: "Menu",
@@ -29,19 +30,25 @@ const contents = [
     paragraph:
       "Located along the Ozamiz–Oroquieta National Highway, just beside 7-Eleven Clarin, our place is easy to find and perfect for quick stopovers. Whether you’re passing through Clarin or exploring Misamis Occidental, we’re in a convenient spot close to local shops and transportation hubs.",
     variant: 2,
+    buttonText: "Get Direction",
+    onClick: () => {
+      const googleMapsUrl =
+        "https://www.google.com/maps/dir/?api=1&destination=8.1945863,123.8591501";
+      window.open(googleMapsUrl, "_blank");
+    },
   },
 ];
 
 function App() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-20">
       <Navigation />
       <ImgWithTextOverlay src={"images/site_02.jpg"} text={"Sisig Corner"}>
         <Button fontVar={3} className={"mt-7"}>
           RESERVATIONS
         </Button>
       </ImgWithTextOverlay>
-      <Ticker item={<Star />} />
+      <Ticker item={<Star color="white" />} />
       <ContentCard {...contents[0]} />
       <SplitSection>
         <Image

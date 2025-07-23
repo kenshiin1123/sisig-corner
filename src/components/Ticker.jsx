@@ -1,7 +1,7 @@
 import Star from "./Star";
 
 export default function Marquee({ variant = 1, item = <Star /> }) {
-  let variantClass = "bg-[#FFA3AE]";
+  let variantClass = "bg-primary";
 
   if (variant === 2) {
     variantClass = "bg-white text-black";

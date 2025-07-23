@@ -15,6 +15,9 @@ const MenuButton = () => {
     <motion.button
       className="text-6xl"
       initial={{ rotate: 0 }}
+      whileTap={{
+        scale: 0.8,
+      }}
       whileHover={{
         rotate: 180,
         transition: {

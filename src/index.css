@@ -13,7 +13,7 @@
   --font-pt-serif: "PT Serif", serif;
   --font-roboto: "Roboto", serif;
   --animate-infinite-scroll: infinite-scroll 5s linear infinite;
-  --color-primary: #ffa3ae;
+  --color-primary: #e04210;
   --color-secondary: #33522d;
 
   @keyframes infinite-scroll {

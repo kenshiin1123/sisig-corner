@@ -1,16 +1,52 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Button({
   children,
   variant = 1,
   fontVar = 3,
+  onClick = () => {
+    console.log("Button Clicked");
+  },
   className,
 }) {
-  let variantClass = "hover:bg-white hover:text-black ";
+  let varAnim = {
+    initial: {
+      backgroundColor: "transparent",
+    },
+    whileHover: {
+      backgroundColor: "black",
+      color: "white",
+      transition: {
+        duration: 1,
+      },
+    },
+    whileTap: {
+      scale: 0.9,
+      transition: {
+        type: "spring",
+        stiffness: 500, // snappy compression
+        damping: 20, // quick return to normal
+      },
+    },
+  };
+
   let fontVarClass = "font-noto-serif";
 
   if (variant === 2) {
-    variantClass = "hover:bg-black hover:text-white";
+    varAnim = {
+      ...varAnim,
+      initial: {
+        backgroundColor: "transparent",
+      },
+      whileHover: {
+        backgroundColor: "white",
+        color: "black",
+        transition: {
+          duration: 100,
+        },
+      },
+    };
   }
 
   if (fontVar === 2) {
@@ -20,10 +56,12 @@ export default function Button({
     fontVarClass = "font-roboto";
   }
   return (
-    <button
-      className={`w-fit text-md rounded-full border-1 px-7 py-2 uppercase font-semibold transition duration-500 hover:transition ${variantClass} ${fontVarClass} ${className}`}
+    <motion.button
+      {...varAnim}
+      onClick={onClick}
+      className={`w-fit text-md rounded-full border-1 px-7 py-2 uppercase font-semibold transition-colors duration-500 ${fontVarClass} ${className}`}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }
