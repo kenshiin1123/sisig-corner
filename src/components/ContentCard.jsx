@@ -21,7 +21,10 @@ export default function ContentCard({
       className={`px-3 py-10 flex flex-col justify-center ${variantClass} ${className}`}
     >
       <span className="text-3xl">
-        <Star color={variant === 1 ? "black" : "white"} className="mb-5" />
+        <Star
+          color={variant === 1 ? "black" : "rgb(255, 255, 255)"}
+          className="mb-5"
+        />
       </span>
       <Header className={"mb-5"}>{header}</Header>
       <p className="text-sm font-pt-serif sm:max-w-[80%] md:max-w-[60%]">

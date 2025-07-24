@@ -15,22 +15,18 @@ export default function Homepage() {
     <div className="flex flex-col pb-20">
       <Navigation />
       <ImgWithTextOverlay
-        src={"images/site_02.jpg"}
+        src={"images/owner_03.jpg"}
         text={"Sisig Corner"}
-        className={"space-x-4"}
+        className={"[&>button]:text-sm"}
       >
-        <Button fontVar={3} className={"mt-7"}>
-          Order Online
-        </Button>
-        <Button fontVar={3} className={"mt-7"}>
-          RESERVATIONS
-        </Button>
+        <Button fontVar={3}>Order Online</Button>
+        <Button fontVar={3}>RESERVATIONS</Button>
       </ImgWithTextOverlay>
       <Ticker item={<Star color="white" />} />
       <ContentCard {...contents[0]} />
       <SplitSection>
         <Image
-          height="h-80 sm:h-full"
+          height="h-100 sm:h-[30rem]"
           width="sm:w-[50%]"
           src="/images/sisig_01.jpg"
         />

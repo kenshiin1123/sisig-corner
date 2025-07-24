@@ -40,7 +40,7 @@ export default function Button({
         backgroundColor: "transparent",
       },
       whileHover: {
-        backgroundColor: "white",
+        backgroundColor: "rgb(255, 255, 255)",
         color: "black",
         transition: {
           duration: 100,
