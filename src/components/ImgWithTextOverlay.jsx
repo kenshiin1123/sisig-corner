@@ -39,7 +39,7 @@ export default function ImgWithTextOverlay({
         className="w-full h-full object-cover  object-top"
       />
       {/* Background Darker */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
     </motion.div>
   );
 }

@@ -19,7 +19,9 @@ export default function ContentCard({
 
   return (
     <div
-      className={` px-3 py-10 flex flex-col justify-center ${variantClass} ${className}`}
+      className={`px-3 py-10 flex flex-col justify-center ${
+        variant === 1 ? "py-15 sm:ml-5" : ""
+      } ${variantClass} ${className}`}
     >
       <motion.span
         initial={{ opacity: 0, y: 30 }}
@@ -34,7 +36,7 @@ export default function ContentCard({
         />
       </motion.span>
       <Header className={"mb-5"}>{header}</Header>
-      <p className="text-sm font-pt-serif sm:max-w-[80%] md:max-w-[60%]">
+      <p className="font-roboto text-sm sm:text-md sm:max-w-[80%] md:max-w-[60%] lg:max-w-[55%]">
         {paragraph}
       </p>
       {buttonText && (

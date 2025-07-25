@@ -12,7 +12,6 @@ import contents from "../data/contents";
 export default function Homepage() {
   return (
     <div className="flex flex-col pb-20">
-      <Navigation />
       <ImgWithTextOverlay
         src={"images/owner_03.jpg"}
         text={"Sisig Corner"}
@@ -25,7 +24,7 @@ export default function Homepage() {
       <ContentCard {...contents[0]} />
       <SplitSection>
         <Image
-          height="h-100 sm:h-[30rem]"
+          height="h-100 sm:h-[40rem]"
           width="sm:w-[50%]"
           src="/images/sisig_01.jpg"
         />
