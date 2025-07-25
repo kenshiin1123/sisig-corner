@@ -12,22 +12,20 @@ export default function Button({
 }) {
   let varAnim = {
     initial: {
-      backgroundColor: "transparent",
+      backgroundColor: "rgba(0, 0, 0, 0)",
     },
     whileHover: {
-      backgroundColor: "black",
-      color: "white",
-      transition: {
-        duration: 1,
-      },
+      backgroundColor: "rgba(0, 0, 0, 1)",
+      color: "rgba(255, 255, 255, 1)",
+      scale: 0.9,
+      y: -2,
     },
     whileTap: {
-      scale: 0.9,
-      transition: {
-        type: "spring",
-        stiffness: 500, // snappy compression
-        damping: 20, // quick return to normal
-      },
+      scale: 0.8,
+    },
+    transition: {
+      duration: 0.2,
+      type: "tween",
     },
   };
 
@@ -37,14 +35,13 @@ export default function Button({
     varAnim = {
       ...varAnim,
       initial: {
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(0, 0, 0, 0)",
       },
       whileHover: {
-        backgroundColor: "rgb(255, 255, 255)",
-        color: "black",
-        transition: {
-          duration: 100,
-        },
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        color: "rgba(0, 0, 0, 1)",
+        scale: 0.9,
+        y: -2,
       },
     };
   }
@@ -59,7 +56,7 @@ export default function Button({
     <motion.button
       {...varAnim}
       onClick={onClick}
-      className={`w-fit text-md rounded-full border-1 px-7 py-2 uppercase font-semibold transition-colors duration-500 ${fontVarClass} ${className}`}
+      className={`w-fit text-md rounded-full border-1 px-7 py-2 uppercase font-semibold ${fontVarClass} ${className}`}
     >
       {children}
     </motion.button>

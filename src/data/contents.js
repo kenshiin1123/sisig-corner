@@ -23,7 +23,13 @@ const contents = [
     onClick: () => {
       const googleMapsUrl =
         "https://www.google.com/maps/dir/?api=1&destination=8.1945863,123.8591501";
-      window.open(googleMapsUrl, "_blank");
+
+      const proceed = window.confirm(
+        "This will open Google Maps in a new tab for directions. Continue?"
+      );
+      if (proceed) {
+        window.open(googleMapsUrl, "_blank");
+      }
     },
     color: "bg-secondary",
   },

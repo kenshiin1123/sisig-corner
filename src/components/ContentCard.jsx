@@ -1,6 +1,7 @@
 import Star from "../components/Star.jsx";
 import Button from "./Button.jsx";
 import Header from "./Header.jsx";
+import { motion } from "motion/react";
 export default function ContentCard({
   color = "bg-primary",
   header,
@@ -18,14 +19,20 @@ export default function ContentCard({
 
   return (
     <div
-      className={`px-3 py-10 flex flex-col justify-center ${variantClass} ${className}`}
+      className={` px-3 py-10 flex flex-col justify-center ${variantClass} ${className}`}
     >
-      <span className="text-3xl">
+      <motion.span
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring" }}
+        className=" text-3xl"
+      >
         <Star
+          animate={true}
           color={variant === 1 ? "black" : "rgb(255, 255, 255)"}
           className="mb-5"
         />
-      </span>
+      </motion.span>
       <Header className={"mb-5"}>{header}</Header>
       <p className="text-sm font-pt-serif sm:max-w-[80%] md:max-w-[60%]">
         {paragraph}

@@ -1,12 +1,21 @@
-const Star = ({ size = 30, color = "#000", className = "" }) => {
+import { motion } from "motion/react";
+
+const Star = ({ size = 30, color = "#000", className = "", animate }) => {
+  const animation = {
+    initial: { scale: 1 },
+    whileInView: { scale: animate ? [3, 1] : 1 },
+    transition: { type: "spring" },
+  };
+
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 256"
       width={size}
       height={size}
       className={className}
       fill={color}
+      {...animation}
     >
       <path
         d="M126.6,10.4c-0.4,0.2-1.2,4.8-2.4,13.4c-3.3,25.3-5.9,39-9.8,50.5
@@ -17,7 +26,7 @@ const Star = ({ size = 30, color = "#000", className = "" }) => {
         c-25-3.2-38.4-5.9-49.6-9.5c-18.5-6-29.3-14.8-36.7-29.7c-6.3-12.7-9.9-28.5-14.4-62.9
         c-1-7.5-1.7-11.4-2.1-11.7C128.5,9.9,127.5,9.9,126.6,10.4z"
       />
-    </svg>
+    </motion.svg>
   );
 };
 
