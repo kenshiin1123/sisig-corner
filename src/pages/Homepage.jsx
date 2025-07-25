@@ -7,7 +7,6 @@ import SplitSection from "../components/SplitSection";
 import Image from "../components/Image";
 import Map from "../components/Map";
 import Star from "../components/Star";
-
 import contents from "../data/contents";
 
 export default function Homepage() {
