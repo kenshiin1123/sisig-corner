@@ -26,7 +26,9 @@ export default function Navigation() {
   return (
     <header className="flex items-center w-full gap-4 text-white fixed top-0 bg-black/20 backdrop-blur-xs z-40 h-12 px-5">
       <NavButton onClick={openModal} />
-      <span className="text-2xl italic">Sisig Corner</span>
+      <Link to={"/"} className="text-2xl italic">
+        Sisig Corner
+      </Link>
       <ul className="flex ml-auto gap-4 max-sm:hidden">
         {tabs.map((tab) => (
           <Tab key={tab.title} {...tab} />

@@ -2,7 +2,7 @@ const contents = [
   {
     header: "About Us",
     paragraph:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil nesciunt quam at illo consectetur asperiores harum, voluptatem natus quo quaerat. Ratione in quas expedita nostrum ullam molestias id ipsa vero.",
+      "This is the space to introduce visitors to the business or brand. Briefly explain who's behind it, what it does and what makes it unique. Share its core values and what this site has to offer.  Define the qualities and values that make it unique.",
     buttonText: "Read More",
     variant: 1,
   },
@@ -32,6 +32,14 @@ const contents = [
       }
     },
     color: "bg-secondary",
+  },
+  {
+    header: "Our Story",
+    paragraph: [
+      "This is a space to share more about the business: who's behind it, what it does and what this site has to offer. It’s an opportunity to tell the story behind the business or describe a special service or product it offers. You can use this section to share the company's history or highlight a particular feature that sets it apart from competitors.",
+      "Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company’s values and personality.",
+    ],
+    variant: 1,
   },
 ];
 
